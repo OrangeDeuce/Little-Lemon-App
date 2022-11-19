@@ -42,9 +42,9 @@ const SubscribeScreen = () => {
         Subscribe
       </Button>
       <Image
-        style={styles.foodImage}
+        style={styles.restaurantImage}
         source={require("../img/diningPhoto.jpg")}
-        resizeMethod="contain"
+        resizeMethod="cover"
       />
     </ScrollView>
   );
@@ -101,10 +101,13 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
 
-  foodImage: {
-    height: 200,
-    width: 275,
+  restaurantImage: {
+    height: 230,
+    width: 360,
     alignSelf: "center",
     margin: 40,
+    borderWidth: 1,
+    borderColor: "white",
+    borderRadius: 10,
   },
 });

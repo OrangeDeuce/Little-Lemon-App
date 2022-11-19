@@ -64,6 +64,8 @@ export default function App() {
               iconName = focused ? "chatbubble" : "chatbubble-outline";
             } else if (route.name === "Subscribe") {
               iconName = focused ? "notifications" : "notifications-outline";
+            } else if (route.name === "Login") {
+              iconName = focused ? "log-in" : "log-in-outline";
             }
 
             return <Ionicons name={iconName} size={size} color={color} />;

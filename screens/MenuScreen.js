@@ -8,6 +8,7 @@ import {
   SectionList,
   Pressable,
   Image,
+  ImageBackground,
 } from "react-native";
 
 const green = "#495E57";
@@ -188,6 +189,28 @@ const Header = () => <Text style={menuStyles.headerText}>View Menu</Text>;
 
 const Separator = () => <View style={menuStyles.separator} />;
 
+const MenuHeader = () => {
+  return (
+    <ImageBackground
+      style={menuStyles.headerImage}
+      source={require("../img/FoodPlateHeroPic.jpg")}
+      resizeMode="cover"
+    >
+      <Text
+        style={{
+          color: "white",
+          textAlign: "center",
+          justifyContent: "center",
+          fontFamily: "NotoSerifOriya",
+          fontSize: 60,
+        }}
+      >
+        Menu
+      </Text>
+    </ImageBackground>
+  );
+};
+
 const ItemSummary = ({ image, description }) => {
   return (
     <>
@@ -233,7 +256,7 @@ const Item = ({ name, price, image, description }) => {
 };
 
 const MenuItems = ({ navigation }) => {
-  const [showMenu, setShowMenu] = React.useState(false);
+  // const [showMenu, setShowMenu] = React.useState(false);
 
   const renderItem = ({ item }) => (
     <Item
@@ -245,44 +268,22 @@ const MenuItems = ({ navigation }) => {
   );
 
   const renderSectionHeader = ({ section: { title } }) => (
-    <Text style={menuStyles.sectionHeader}>{title}</Text>
+    <View style={menuStyles.sectionHeader}>
+      <Text style={menuStyles.sectionHeaderText}>{title}</Text>
+    </View>
   );
 
   return (
     <View style={menuStyles.container}>
-      {!showMenu && (
-        <Text style={menuStyles.intro}>
-          Little Lemon is a charming neighborhood bistro that serves simple food
-          and cocktails in a lively but casual environment. View our menu to
-          explore our cuisines with daily specials!
-        </Text>
-      )}
-      <Pressable
-        style={menuStyles.button}
-        onPress={() => {
-          setShowMenu(!showMenu);
-        }}
+      <SectionList
+        sections={menuItemsToDisplay}
+        renderItem={renderItem}
+        renderSectionHeader={renderSectionHeader} // Rendered at the beginning of each existing section in SectionList!
+        ItemSeparatorComponent={Separator}
+        ListHeaderComponent={MenuHeader} // To add a sticky header rendered ONLY at top of SectionList and will scroll!
       >
-        <Text style={menuStyles.buttonText}>
-          {showMenu ? "Home" : "View Menu"}
-        </Text>
-      </Pressable>
-      {showMenu && (
-        <SectionList
-          sections={menuItemsToDisplay}
-          renderItem={renderItem}
-          renderSectionHeader={renderSectionHeader}
-          ItemSeparatorComponent={Separator}
-        >
-          {menuItemsToDisplay}
-        </SectionList>
-      )}
-      <Pressable
-        style={menuStyles.gobackButton}
-        onPress={() => navigation.goBack()}
-      >
-        <Text style={menuStyles.buttonText}>Go back</Text>
-      </Pressable>
+        {menuItemsToDisplay}
+      </SectionList>
     </View>
   );
 };
@@ -326,11 +327,33 @@ const menuStyles = StyleSheet.create({
     borderColor: yellow,
   },
 
+  headerImage: {
+    // lets try a <Scroll view around everything, and also to fix border radius and fix login screen issue
+    height: 300,
+    width: 440,
+    alignSelf: "center",
+    borderWidth: 1,
+    borderColor: "#495E57",
+    borderRadius: 20,
+    justifyContent: "center",
+  },
+
   sectionHeader: {
     backgroundColor: "#F4CE14",
     // color: "black",
     fontSize: 25,
     textAlign: "center",
+    height: 50,
+    borderWidth: 1,
+    borderColor: "#F4CE14",
+    justifyContent: "center",
+  },
+
+  sectionHeaderText: {
+    textAlign: "center",
+    fontFamily: "NotoSerifOriya",
+    paddingTop: 5,
+    fontSize: 25,
   },
 
   button: {
