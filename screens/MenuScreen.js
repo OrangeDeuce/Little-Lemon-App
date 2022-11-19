@@ -17,42 +17,169 @@ const menuItemsToDisplay = [
   {
     title: "Appetizers",
     data: [
-      { name: "Hummus", price: "$5.00" },
-      { name: "Moutabal", price: "$5.00" },
-      { name: "Falafel", price: "$7.50" },
-      { name: "Marinated Olives", price: "$5.00" },
-      { name: "Kofta", price: "$5.00" },
-      { name: "Eggplant Salad", price: "$8.50" },
+      {
+        name: "Hummus",
+        price: "$5.00",
+        description:
+          "Chickpea blended with the tahini, salt, olive oil and lemon juice with sumac and parsley served with pita bread.",
+        image: require("../img/Hummus.png"),
+      },
+      {
+        name: "Moutabal",
+        price: "$5.00",
+        description:
+          "Charcoal grilled Eggplant mixed with Tahina, Lemon, Garlic and olive oil. Ricotta cheeseburger manchego",
+        image: require("../img/Moutabal.png"),
+      },
+      {
+        name: "Falafel",
+        price: "$7.50",
+        description:
+          "Deep fried vegan fritters made from ground chick peas, commonly served in pita bread or wrapped in a flatbread with hummus and tahini.",
+        image: require("../img/Falafel.png"),
+      },
+      {
+        name: "Marinated Olives",
+        price: "$5.00",
+        description:
+          "Cheesy feet when the cheese comes out everybody's happy say cheese queso mozzarella pecorino cheesy grin pepper jack.",
+        image: require("../img/MarinatedOlives.png"),
+      },
+      {
+        name: "Kofta",
+        price: "$5.00",
+        description:
+          "Feta port-salut bocconcini halloumi camembert de normandie pepper jack blue castello taleggio.",
+        image: require("../img/Kofta.png"),
+      },
+      {
+        name: "Eggplant Salad",
+        price: "$8.50",
+        description:
+          "Emmental babybel cheese and wine mascarpone mozzarella cheese and biscuits cut the cheese lancashire.",
+        image: require("../img/EggplantSalad.png"),
+      },
     ],
   },
   {
     title: "Main Dishes",
     data: [
-      { name: "Lentil Burger", price: "$10.00" },
-      { name: "Smoked Salmon", price: "$14.00" },
-      { name: "Kofta Burger", price: "$11.00" },
-      { name: "Turkish Kebab", price: "$15.50" },
+      {
+        name: "Lentil Burger",
+        price: "$10.00",
+        description:
+          "When the cheese comes out everybody's happy pepper jack cow.",
+        image: require("../img/LentilBurger.png"),
+      },
+      {
+        name: "Smoked Salmon",
+        price: "$14.00",
+        description:
+          "Mascarpone paneer st. agur blue cheese. Bocconcini parmesan caerphilly paneer ricotta roquefort rubber cheese halloumi",
+        image: require("../img/SmokedSalmon.png"),
+      },
+      {
+        name: "Kofta Burger",
+        price: "$11.00",
+        description:
+          "Cottage cheese fromage frais cauliflower cheese fondue melted cheese cream cheese cheeseburger edam. Everyone loves cheddar.",
+        image: require("../img/KoftaBurger.png"),
+      },
+      {
+        name: "Turkish Kebab",
+        price: "$15.50",
+        description:
+          "Bocconcini blue castello red leicester. Cheese strings cheesy feet mascarpone cheese and wine caerphilly dolcelatte cow cheesy feet.",
+        image: require("../img/TurkishBurger.png"),
+      },
     ],
   },
   {
     title: "Sides",
     data: [
-      { name: "Fries", price: "$3.00", id: "11K" },
-      { name: "Buttered Rice", price: "$3.00" },
-      { name: "Bread Sticks", price: "$3.00" },
-      { name: "Pita Pocket", price: "$3.00" },
-      { name: "Lentil Soup", price: "$3.75" },
-      { name: "Greek Salad", price: "$6.00" },
-      { name: "Rice Pilaf", price: "$4.00" },
+      {
+        name: "Fries",
+        price: "$3.00",
+        id: "11K",
+        description:
+          "Mozzarella blue castello fondue cow cheese triangles cheese and biscuits stilton goat. Squirty cheese.",
+        image: require("../img/FrenchFries.png"),
+      },
+      {
+        name: "Buttered Rice",
+        price: "$3.00",
+        description:
+          "Taleggio jarlsberg cheese slices. Cheese on toast fromage frais goat pecorino croque monsieur cream cheese squirty cheese cut the cheese.",
+        image: require("../img/ButteredRice.png"),
+      },
+      {
+        name: "Bread Sticks",
+        price: "$3.00",
+        description:
+          "Fromage frais gouda stinking bishop cow cottage cheese caerphilly blue castello cut the cheese.",
+        image: require("../img/BreadSticks.png"),
+      },
+      {
+        name: "Pita Pocket",
+        price: "$3.00",
+        description:
+          "Fondue camembert de normandie cheese and biscuits caerphilly melted cheese smelly cheese st. agur blue cheese taleggio.",
+        image: require("../img/PitaPocket.png"),
+      },
+      {
+        name: "Lentil Soup",
+        price: "$3.75",
+        description:
+          "Ricotta pepper jack macaroni cheese port-salut cheesecake swiss pecorino macaroni cheese.",
+        image: require("../img/LentilSoup.png"),
+      },
+      {
+        name: "Greek Salad",
+        price: "$6.00",
+        description:
+          "Roquefort fondue roquefort pepper jack cauliflower cheese macaroni cheese melted cheese fromage frais.",
+        image: require("../img/GreekSalad.png"),
+      },
+      {
+        name: "Rice Pilaf",
+        price: "$4.00",
+        description:
+          "Paneer cheese and wine port-salut melted cheese gouda cheesy feet boursin danish fontina. Taleggio emmental.",
+        image: require("../img/RicePilaf.png"),
+      },
     ],
   },
   {
     title: "Desserts",
     data: [
-      { name: "Baklava", price: "$3.00" },
-      { name: "Tartufo", price: "$3.00" },
-      { name: "Tiramisu", price: "$5.00" },
-      { name: "Panna Cotta", price: "$5.00" },
+      {
+        name: "Baklava",
+        price: "$3.00",
+        description:
+          "Cheesy feet when the cheese comes out everybody's happy say cheese queso mozzarella pecorino cheesy grin pepper jack.",
+        image: require("../img/Baklava.png"),
+      },
+      {
+        name: "Tartufo",
+        price: "$3.00",
+        description:
+          "Feta port-salut bocconcini halloumi camembert de normandie pepper jack blue castello taleggio.",
+        image: require("../img/Tartufo.png"),
+      },
+      {
+        name: "Tiramisu",
+        price: "$5.00",
+        description:
+          "Emmental babybel cheese and wine mascarpone mozzarella cheese and biscuits cut the cheese lancashire.",
+        image: require("../img/Tiramisu.png"),
+      },
+      {
+        name: "Panna Cotta",
+        price: "$5.00",
+        description:
+          "When the cheese comes out everybody's happy pepper jack cow. Mascarpone paneer st. agur blue cheese.",
+        image: require("../img/PannaCotta.png"),
+      },
     ],
   },
 ];
@@ -61,28 +188,22 @@ const Header = () => <Text style={menuStyles.headerText}>View Menu</Text>;
 
 const Separator = () => <View style={menuStyles.separator} />;
 
-const ItemSummary = ({ image }) => {
+const ItemSummary = ({ image, description }) => {
   return (
-    <View style={menuStyles.itemSummary}>
-      <View style={menuStyles.itemImageContainer}>
-        <Image
-          style={menuStyles.itemImage}
-          source={require("../img/Picture2.png")}
-        />
+    <>
+      <View style={menuStyles.itemSummary}>
+        <View style={menuStyles.itemImageContainer}>
+          <Image style={menuStyles.itemImage} source={image} />
+        </View>
+        <View style={menuStyles.itemTextContainer}>
+          <Text style={menuStyles.itemSummaryText}>{description}</Text>
+        </View>
       </View>
-      <View style={menuStyles.itemTextContainer}>
-        <Text style={menuStyles.itemSummaryText}>
-          Our delicious hummus paste originating in the Middle East that is
-          traditionally made of pureed or mashed cooked chickpeas mixed with
-          tahini—a toasted sesame condiment—and diced garlic, lemon juice, and
-          salt
-        </Text>
-      </View>
-    </View>
+    </>
   );
 };
 
-const Item = ({ name, price, image }) => {
+const Item = ({ name, price, image, description }) => {
   const [pressed, setPressed] = React.useState(false);
   return (
     <>
@@ -104,7 +225,7 @@ const Item = ({ name, price, image }) => {
           //     source={require("../img/Picture2.png")}
           //   />
           // </View>
-          <ItemSummary />
+          <ItemSummary image={image} description={description} />
         )}
       </Pressable>
     </>
@@ -113,10 +234,14 @@ const Item = ({ name, price, image }) => {
 
 const MenuItems = ({ navigation }) => {
   const [showMenu, setShowMenu] = React.useState(false);
-  // const [pressed, setPressed] = React.useState(false);
 
-  const renderItem = ({ item, price }) => (
-    <Item name={item.name} price={item.price} />
+  const renderItem = ({ item }) => (
+    <Item
+      name={item.name}
+      price={item.price}
+      image={item.image}
+      description={item.description}
+    />
   );
 
   const renderSectionHeader = ({ section: { title } }) => (
@@ -176,8 +301,9 @@ const menuStyles = StyleSheet.create({
     paddingVertical: 18,
     paddingHorizontal: 35,
     justifyContent: "space-between",
-    borderWidth: 2,
-    borderColor: "white",
+    borderBottomColor: "#90b7aa",
+    borderWidth: 1,
+    // borderColor: "white",
   },
 
   headerText: {
@@ -191,18 +317,18 @@ const menuStyles = StyleSheet.create({
   itemText: {
     color: yellow,
     fontSize: 20,
-    borderWidth: 2,
-    borderColor: "blue",
+    // borderWidth: 2,
+    // borderColor: "blue",
   },
 
   separator: {
-    borderBottomWidth: 1,
+    borderBottomWidth: 2,
     borderColor: yellow,
   },
 
   sectionHeader: {
     backgroundColor: "#F4CE14",
-    color: "black",
+    // color: "black",
     fontSize: 25,
     textAlign: "center",
   },
@@ -214,8 +340,8 @@ const menuStyles = StyleSheet.create({
     alignSelf: "center",
     margin: 10,
     borderRadius: 12,
-    borderWidth: 2,
-    borderColor: "#495E57",
+    // borderWidth: 2,
+    // borderColor: "#495E57",
   },
 
   buttonText: {
@@ -238,13 +364,14 @@ const menuStyles = StyleSheet.create({
     alignSelf: "center",
     margin: 10,
     borderRadius: 12,
-    borderWidth: 2,
-    borderColor: "#495E57",
+    // borderWidth: 2,
+    // borderColor: "#495E57",
   },
 
   itemSummary: {
     flexDirection: "row",
-    padding: 20,
+    paddingVertical: 20,
+    paddingHorizontal: 5,
   },
 
   itemImageContainer: {
@@ -253,23 +380,29 @@ const menuStyles = StyleSheet.create({
 
   itemTextContainer: {
     padding: 10,
+    justifyContent: "center",
   },
 
   itemImage: {
-    height: 100,
-    width: 80,
+    height: 120,
+    width: 100,
     resizeMode: "contain",
     alignSelf: "center",
-    borderWidth: 2,
-    borderColor: "red",
+    // borderWidth: 2,
+    // borderColor: "red",
     alignItems: "center",
+    marginLeft: 20,
   },
 
   itemSummaryText: {
     color: "white",
-    padding: 10,
-    marginRight: 20,
-    borderWidth: 1,
-    borderColor: "white",
+    paddingLeft: 10,
+    marginRight: 30,
+    paddingRight: 15,
+
+    // borderWidth: 1,
+    // borderColor: "white",
+    fontSize: 17,
+    width: 270,
   },
 });

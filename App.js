@@ -103,7 +103,7 @@ const appStyles = StyleSheet.create({
   footerContainer: {
     // paddingVertical: 10,
     backgroundColor: "#495E57",
-    borderColor: "red",
-    borderWidth: 2,
+    // borderColor: "red",
+    // borderWidth: 2,
   },
 });
