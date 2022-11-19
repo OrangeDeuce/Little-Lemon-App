@@ -41,6 +41,11 @@ const SubscribeScreen = () => {
       >
         Subscribe
       </Button>
+      <Image
+        style={styles.foodImage}
+        source={require("../img/diningPhoto.jpg")}
+        resizeMethod="contain"
+      />
     </ScrollView>
   );
 };
@@ -94,5 +99,12 @@ const styles = StyleSheet.create({
     width: 360,
     alignSelf: "center",
     borderRadius: 8,
+  },
+
+  foodImage: {
+    height: 200,
+    width: 275,
+    alignSelf: "center",
+    margin: 40,
   },
 });

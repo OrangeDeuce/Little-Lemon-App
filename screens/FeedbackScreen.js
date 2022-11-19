@@ -21,12 +21,13 @@ const FeedbackForm = () => {
     >
       <ScrollView keyboardDismissMode="on-drag">
         <Text style={styles.headingSection}>
-          How was your visit to Little Land?
+          How was your visit to Little Lemon?
         </Text>
         <Text style={styles.infoSection}>
-          Little Lemon is a charming neighborhood bistro that serves simple food
-          and classic cocktails in a lively but casual environment. We would
-          love to hear your experience with us!
+          We strive for open communication and are ready to hear your comments
+          and suggestions at how we can continue to deliver quality service and
+          food at Little Lemon. We would love to hear about your experience with
+          us!
         </Text>
 
         <TextInput

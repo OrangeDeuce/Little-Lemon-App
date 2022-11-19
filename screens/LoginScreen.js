@@ -16,7 +16,9 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <ScrollView style={styles.container} keyboardDismissMode="on-drag">
-      <Text style={styles.headerText}>Welcome to Little Lemon</Text>
+      <Text style={styles.headerText}>
+        Welcome to LITTLE LEMON Mediterranean Bistro!
+      </Text>
       {loggedIn && <Text style={styles.headerText}>You are logged in!</Text>}
 
       {!loggedIn && (
@@ -61,7 +63,7 @@ const LoginScreen = ({ navigation }) => {
             // }}
             onPress={() => navigation.navigate("Welcome")}
           >
-            <Text style={styles.loginButtonText}>Log in</Text>
+            <Text style={styles.loginButtonText}>LOG IN</Text>
           </Pressable>
         </>
       )}
@@ -88,10 +90,12 @@ const styles = StyleSheet.create({
   },
 
   headerText: {
-    padding: 40,
-    fontSize: 30,
+    padding: 30,
+    paddingHorizontal: 50,
+    fontSize: 35,
     color: "#EDEFEE",
     textAlign: "center",
+    fontFamily: "NotoSerifOriya",
   },
 
   regularText: {
@@ -100,6 +104,7 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     color: "#EDEFEE",
     textAlign: "center",
+    fontFamily: "NotoSerifOriya",
   },
 
   loginButton: {
@@ -107,12 +112,14 @@ const styles = StyleSheet.create({
     width: 200,
     alignSelf: "center",
     padding: 12,
-    borderRadius: 30,
+    borderRadius: 40,
     margin: 10,
   },
 
   loginButtonText: {
+    paddingTop: 5,
     textAlign: "center",
-    fontSize: 30,
+    fontSize: 25,
+    fontFamily: "NotoSerifOriya",
   },
 });

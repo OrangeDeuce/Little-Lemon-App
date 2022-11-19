@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Ionicons } from "@expo/vector-icons";
+import { useFonts } from "expo-font";
 
 import WelcomeScreen from "./screens/WelcomeScreen";
 import MenuScreen from "./screens/MenuScreen";
@@ -35,6 +36,14 @@ function LogoTitle() {
 }
 
 export default function App() {
+  const [loaded] = useFonts({
+    NotoSerifOriya: require("./assets/fonts/NotoSerifOriya.ttf"),
+  });
+
+  if (!loaded) {
+    return null;
+  }
+
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -68,6 +77,7 @@ export default function App() {
         <Tab.Screen name="Menu" component={MenuScreen} />
         <Tab.Screen name="Subscribe" component={SubscribeScreen} />
         <Tab.Screen name="Feedback" component={FeedbackScreen} />
+        <Tab.Screen name="Login" component={LoginScreen} />
       </Tab.Navigator>
       {/* <Stack.Navigator
         initialRouteName="Login"

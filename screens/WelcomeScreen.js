@@ -6,13 +6,14 @@ import {
   StyleSheet,
   Image,
   Pressable,
+  ImageBackground,
 } from "react-native";
 
 const WelcomeScreen = ({ navigation }) => {
   return (
     <View style={welcomeStyles.container}>
       <ScrollView indicatorStyle={"white"} style={welcomeStyles.scrollArea}>
-        <View style={welcomeStyles.headerWrapper}>
+        {/* <View style={welcomeStyles.headerWrapper}>
           <Image
             style={welcomeStyles.image}
             source={require("../img/LittleLemonBackground.png")}
@@ -21,15 +22,29 @@ const WelcomeScreen = ({ navigation }) => {
             accessibilityLabel={"Logo image"}
           />
           <Text style={welcomeStyles.headerText}>Little Lemon</Text>
-        </View>
-        <Text style={welcomeStyles.description}>
-          Little Lemon is a charming neighborhood bistro that serves simple food
-          and classic cocktails in a lively but casual environment. We would
-          love to hear more about your experience with us!
-        </Text>
-        <Pressable onPress={() => navigation.navigate("Menu")}>
-          <Text style={welcomeStyles.buttonText}>View Menu</Text>
-        </Pressable>
+        </View> */}
+        <Image
+          style={welcomeStyles.logoBanner}
+          source={require("../img/littleLemonLogo.png")}
+          resizeMode="contain"
+        />
+        <ImageBackground
+          style={welcomeStyles.background}
+          source={require("../img/diningPhotoBW.jpg")}
+          resizeMode="cover"
+        >
+          <Text style={welcomeStyles.description}>
+            Little Lemon is a charming neighborhood Mediterranean bistro that
+            serves simple food and classic cocktails in a lively but casual
+            environment. Welcome to the Little Lemon!
+          </Text>
+          <Pressable
+            style={welcomeStyles.viewMenuButton}
+            onPress={() => navigation.navigate("Menu")}
+          >
+            <Text style={welcomeStyles.buttonText}>View Menu</Text>
+          </Pressable>
+        </ImageBackground>
       </ScrollView>
     </View>
   );
@@ -44,45 +59,50 @@ const welcomeStyles = StyleSheet.create({
 
   scrollArea: {
     flex: 1,
+    paddingVertical: 20,
   },
 
-  headerText: {
-    fontSize: 30,
-    color: "black",
-    paddingTop: 30,
-    paddingBottom: 10,
-    paddingRight: 10,
-    textAlign: "center",
-    paddingLeft: 15,
-    // borderColor: "red",
-    // borderWidth: 2,
+  logoBanner: {
+    width: 325,
+    height: 150,
+    alignSelf: "center",
   },
 
   description: {
     fontSize: 25,
     padding: 20,
+    paddingHorizontal: 60,
     textAlign: "center",
     marginVertical: 8,
-    color: "black",
+    color: "white",
     // borderColor: "red",
     // borderWidth: 2,
+    fontStyle: "italic",
   },
 
-  image: {
-    height: 100,
-    width: 100,
-  },
-
-  headerWrapper: {
-    flexDirection: "row",
-    justifyContent: "center",
-    margin: 10,
+  background: {
+    flex: 1,
+    marginTop: 20,
   },
 
   buttonText: {
-    fontSize: 30,
+    fontSize: 25,
+    paddingTop: 5,
     color: "black",
-    padding: 30,
+    // padding: 30,
     textAlign: "center",
+    fontFamily: "NotoSerifOriya",
+  },
+
+  viewMenuButton: {
+    backgroundColor: "#F4CE14",
+    borderWidth: 1,
+    borderColor: "#F4CE14",
+    borderRadius: 40,
+    width: 200,
+    height: 70,
+    alignSelf: "center",
+    justifyContent: "center",
+    marginBottom: 38,
   },
 });
