@@ -23,4 +23,4 @@ npm start
 ```
 
 ## Credit / Acknowledgement
-Original app from previous coursework: All newly added features and modifications initially from completion of [Coursera's 'React Native - Meta' coursework](https://www.coursera.org/account/accomplishments/certificate/S5H92VWZM4ZK).
+Original Little Lemon Restaurant app from previous coursework: All newly added features and modifications initially from completion of [Coursera's 'React Native - Meta' coursework](https://www.coursera.org/account/accomplishments/certificate/S5H92VWZM4ZK).
