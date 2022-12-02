@@ -4,14 +4,16 @@
 
 
 ### Original project study includes a variety of of existing feature modifications + newly added features:
-- [x] Display all user button presses (Both numbers and operations) in secondary display before pressing = for result
-- [x] Insert dark mode/light mode icon at Switch
-- [x] Basic 2 number ops: When  you press an operation make sure first number does NOT yet disappear (Keep displayed)
-- [x] Add additional local state to capture all history of numbers and math ops before hitting result = 
-- [ ] Nudge the Number Label (Misaligned for all numbers to the left)
-- [ ] To chain multiple operations in succession continously adding a new number + new math operation
-- [ ] When you press each math operation it will calculate so far the result to appear in primary display
-- [ ] To highlight current math operation button when next pending number to still be pressed
+- [x] Updated UI with additional stock photography
+- [x] Updated UI styling and colors
+- [x] Added new font to buttons
+- [x] Added Sticky Header to Menu page (goes away when user scrolls)
+- [x] Menu: Modified SectionList items: added food photo, description (Expanded in place)
+- [x] Menu: Modified Section Headers
+- [ ] Add ordering functionality to app (E-commerce)
+- [ ] Create full integration of Authorization (Add database)
+- [ ] Set up database to capture email subscriptions
+- [ ] Set up database to capture user feedback voluntarily submitted
 - [ ] Add logic to (-) button
 - [ ] Add logic to (+/-) button
 
