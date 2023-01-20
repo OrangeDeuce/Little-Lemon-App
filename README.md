@@ -3,7 +3,7 @@
 ## Adapted from Coursera: React Native - Meta Course (Work in Progress)
 
 
-### Original project study includes a variety of of existing feature modifications + newly added features:
+### Newly added features of my own include:
 - [x] Updated UI with additional stock photography
 - [x] Updated UI styling and colors
 - [x] Added new font to buttons
